@@ -1,0 +1,14 @@
+{
+  "name": "anniversary-server",
+  "version": "1.0.0",
+  "description": "小念服务器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muxiaozi",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1"
+  }
+}
