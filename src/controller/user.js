@@ -62,12 +62,12 @@ module.exports = class User {
      */
     static async findQQId(ctx, next) {
         let qq_id = ctx.params.id;
-        let user = await UserModel.findById(qq_id)
+        let user = await UserModel.findOne({ qq_id })
             .catch(err => ctx.throw(400, err));
         if (user) {
             ctx.body = user;
         } else {
-            ctx.throw(404, wx_id + ' not found');
+            ctx.throw(404, qq_id + ' not found');
         }
         await next();
     }
