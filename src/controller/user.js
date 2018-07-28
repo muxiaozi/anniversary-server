@@ -6,7 +6,6 @@ module.exports = class User {
      */
     static async add(ctx, next) {
         let user_info = ctx.request.body;
-        // user_info.wx_id = null;
         ctx.body = await UserModel.create(user_info)
             .catch(err => ctx.throw(400, err));
         await next();
