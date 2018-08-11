@@ -5,11 +5,12 @@ const UserSchema = new Schema({
     wx_id: { type: String, default: null },
     qq_id: { type: String, default: null },
     name: { type: String, required: true },
-    gender: { type: String, default: '未知' },
+    gender: { type: String, default: '无' },
     avatar_url: { type: String, default: null },
     data: [{
         uuid: { type: Number, default: 0},
-        time: { type: Date, default: Date.now },
+        atime: { type: Date, default: Date.now },
+        utime: { type: Date, default: Date.now },
         content: { type: String, default: null },
         type: { type: Number, default: 0 },
         is_solar: { type: Boolean, default: true }
